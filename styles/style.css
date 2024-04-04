@@ -176,14 +176,14 @@
 }
 
 .card-image__label {
-  position: absolute;
-  mix-blend-mode: hard-light;
-  inset-inline-end: clamp(13px, 0.5484rem + 1.1268vw, 25px);
-  inset-block-start: 25px;
   font-family: var(--accent-font, 'PressStart2P-Regular', Fantasy);
   opacity: 0.5;
   font-size: 14px;
   line-height: 14px;
+  position: absolute;
+  mix-blend-mode: hard-light;
+  inset-inline-end: clamp(13px, 0.5484rem + 1.1268vw, 25px);
+  inset-block-start: 25px;
   text-shadow:
   -1px 0 var(--color-stroke-label, #fff),
   0 1px var(--color-stroke-label, #fff), 
@@ -253,11 +253,11 @@
 }
 
 .card__like-button {
+  background-color: var(--background-color, #fff);
+  border: 2px solid var(--main-color, #000);
   position: relative;
   inline-size: 130px;
   block-size: 38px;
-  background-color: var(--background-color, #fff);
-  border: 2px solid var(--main-color, #000);
   overflow: hidden;
 }
 
@@ -287,6 +287,8 @@
 
 .button__text {
   font-family: var(--accent-font, 'PressStart2P-Regular', Fantasy);
+  mix-blend-mode: difference;
+  color: var(--button-text-color, #fff);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -294,8 +296,6 @@
   line-height: 12.6px;
   position: relative;
   z-index: 1;
-  mix-blend-mode: difference;
-  color: var(--button-text-color, #fff);
 }
 
 .save__button {
@@ -340,17 +340,18 @@
 }
 
 .save__button-svg {
+  color: var(--button-text-color, #fff);
   display: inline-block;
   inline-size: clamp(21px, 1.904rem + -0.6573vw, 28px);
   block-size: clamp(21px, 1.904rem + -0.6573vw, 28px);
   mix-blend-mode: difference;
   position: relative;
   z-index: 1;
-  color: var(--button-text-color, #fff);
+  
 }
 
 .dialog__save-window[open] {
-   font-family: var(--accent-font, 'PressStart2P-Regular', Fantasy);
+  font-family: var(--accent-font, 'PressStart2P-Regular', Fantasy);
   color: var(--main-color, #000);
   background-color: var(--background-color, #fff);
   border: 2px solid var(--main-color, #000);
