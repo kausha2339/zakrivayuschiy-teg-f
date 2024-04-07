@@ -97,13 +97,13 @@
   content: "";
   outline: 1px solid var(--main-color, #000);
   display: block;
-  scale: 0;
+  transform: scale(0);
   transform-origin: 0;
-  transition: scale 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .theme-menu__button:focus-visible::after {
-  scale: 1;
+  transform: scale(1);
 }
 
 .main {
@@ -249,6 +249,7 @@
 }
 
 .button {
+  font-family: var(--accent-font, "PressStart2P-Regular", Fantasy);
   background-color: var(--background-color, #fff);
   border: 2px solid var(--main-color, #000);
   position: relative;
@@ -267,9 +268,9 @@
   content: "";
   position: absolute;
   background-color: var(--main-color, #000);
-  translate: -100%;
+  transform: translate(-100%);
   inset: 0;
-  transition: translate 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .button:hover {
@@ -277,12 +278,11 @@
 }
 
 .button:hover::after {
-  translate: 0;
-  transition: translate 0.5s ease-in-out;
+  transform: translate(0);
+  transition: transform 0.5s ease-in-out;
 }
 
 .button__text {
-  font-family: var(--accent-font, "PressStart2P-Regular", Fantasy);
   mix-blend-mode: difference;
   color: var(--button-text-color, #fff);
   display: flex;
@@ -319,7 +319,6 @@
 }
 
 .dialog__save-window[open] {
-  font-family: var(--accent-font, "PressStart2P-Regular", Fantasy);
   color: var(--main-color, #000);
   background-color: var(--background-color, #fff);
   border: 2px solid var(--main-color, #000);
@@ -354,14 +353,13 @@
 }
 
 .save__window-text {
+  font-family: var(--accent-font, "PressStart2P-Regular", Fantasy);
   text-transform: uppercase;
   font-size: 14px;
   line-height: 21px;
 }
 
 .save__window-button {
-  background-color: var(--background-color, #fff);
-  border: 2px solid var(--main-color, #000);
   block-size: 38px;
   inline-size: 100%;
   text-transform: uppercase;
