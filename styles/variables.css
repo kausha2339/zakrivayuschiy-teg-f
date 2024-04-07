@@ -11,7 +11,7 @@
     --gradient-color-top: #e7e7e7;
     --gradient-color-bottom: #1a1a1a;
     --start-gradient: 0.01%;
-    --background-image: 
+    --background-gradient: 
     repeating-linear-gradient(var(--gradient-color-stripe-1) 0 2px,  
         var(--gradient-color-stripe-2) 2px 4px),
     repeating-linear-gradient(to right, var(--gradient-color-stripe-1) 0 2px,  
